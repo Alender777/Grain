@@ -1,0 +1,67 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #e9edc9;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.fle {
+  justify-content: center;
+  width: 400px;
+  height: 480px;
+  border-radius: 10px;
+  margin: 0 auto 15px auto;
+  padding: 20px;
+  background: white;
+}
+
+input {
+  margin-left: 10px;
+}
+
+.input-form input {
+  color: #929292;
+  opacity: 0.7;
+  border: dashed #d4a373;
+  cursor: text;
+  display: block;
+  padding: 8px 0;
+  width: 180px;
+  font-size: 14px;
+  line-height: 10px;
+  background-color: transparent;
+}
+
+.input-form input:focus {
+  outline: none;
+}
+
+label {
+  color: #bc6c25;
+  font-weight: bold;
+}
+
+.input-form {
+  font-size: 16px;
+  line-height: 2;
+  margin-left: 20px;
+}
+
+.but {
+  background: #e9edc9;
+  color: #dda15e;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.but:hover {
+  background: #bc6c25;
+  color: #ffffff;
+}

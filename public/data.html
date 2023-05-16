@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheets/ser_style.css"/>
+    <title>Data Input</title>
+</head>
+<body>
+    <div class="fle">
+        <h1 style="margin-left: 20px; color: #2d6a4f">Input Data</h1>
+        <div class="input-form">
+            <form id="price" action="http://localhost:3000/api" method="post">
+                <label for="year"><li>Year：</li></label>
+                <input type="integer" id="year" name="year" placeholder="AD">
+                <label for="month"><li>Month：</li></label>
+                <input type="integer" id="month" name="month" placeholder="Month">
+                <label for="day"><li>Day：</li></label>
+                <input type="integer" id="day" name="day" placeholder="Date">
+                <label for="pri"><li>Price：</li></label>
+                <input type="real" id="pri" name="pri" placeholder="decimals">
+                <button type="submit" class="but" style="margin-top: 15px">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+
