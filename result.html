@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="app">
+  <button v-on:click="handleClick">Show data</button>
+  <table  class="table">
+    <thead>
+    <tr>
+      <th scope="col">year</th>
+      <th scope="col">month</th>
+      <th scope="col">day</th>
+      <th scope="col">GrainPrice</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr v-for="item in data">
+      <td>{{ item.Year }}</td>
+      <td>{{ item.Month }}</td>
+      <td>{{ item.Day }}</td>
+      <td>{{ item.GrainPrice }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  const app = Vue.createApp({
+    data() {
+      return {
+        data: []
+      };
+    },
+    methods: {
+      async handleClick() {
+        console.log("data");
+
+        const url = "http://localhost:3000/api";
+        try {
+          const response = await fetch(url, {
+            method: 'GET',
+          });
+          const res_data = await response.json();
+          this.data = res_data ;
+          console.log("Success", res_data );
+        } catch (error) {
+          console.log("Failed", error);
+        }
+      }
+    }
+  });
+
+  app.mount('#app');
+</script>
+
+</body>
+</html>
